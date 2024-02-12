@@ -1,9 +1,9 @@
 const express = require('express');
-const { getProducts } = require('../controller/controller');
+const { getProducts, getSingleProduct } = require('../controller/controller');
 const router = express.Router();
 
 router.get('/api/products',getProducts);
-router.get('/api/products:id',);
+router.get('/api/products/:id',getSingleProduct);
 router.post('/api/products',)
 router.put('/api/products/:id');
 router.delete('/api/products/:id');
