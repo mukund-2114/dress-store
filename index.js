@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const connectDatabase = require('./config/config')
+const router = require('./routes/routes')
 
 connectDatabase();
 app.get('/', (req, res) => {
@@ -8,6 +9,8 @@ app.get('/', (req, res) => {
         message:"Welcome to the DressStore Application made by Mukund Kapadia"
     })
 })
+
+app.use(router)
 
 
 
