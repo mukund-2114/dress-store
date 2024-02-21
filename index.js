@@ -5,6 +5,7 @@ const router = require('./routes/routes')
 
 
 connectDatabase();
+app.use(express.json())
 
 // app.use(express.json());
 app.get('/', (req, res) => {
